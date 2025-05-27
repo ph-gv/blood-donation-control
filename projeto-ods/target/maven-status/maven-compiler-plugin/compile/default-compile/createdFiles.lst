@@ -1,0 +1,4 @@
+com\mycompany\projeto\ods\dao\DoadorDAO.class
+com\mycompany\projeto\ods\Main.class
+com\mycompany\projeto\ods\model\Doador.class
+com\mycompany\projeto\ods\util\ConexaoBD.class
