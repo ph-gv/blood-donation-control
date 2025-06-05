@@ -9,31 +9,38 @@ import org.mindrot.jbcrypt.BCrypt;
 
 public class DoadorDAO {
     // Método 1: Cadastrar doador
-    public boolean cadastrar(Doador doador) {
+    public void salvar(Doador doador) {
         String sql = "INSERT INTO doadores (nome, cpf, tipo_sanguineo, data_nascimento, senha) VALUES (?, ?, ?, ?, ?)";
+        
+        if (!doador.getSenha().startsWith("$2a$")){
+            String senhaHash = BCrypt.hashpw(doador.getSenha(), BCrypt.gensalt());
+            doador.setSenha(senhaHash);
+        }
         
         try (Connection conn = ConexaoBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            
-            // Gera o hash da senha
-            String senhaHash = BCrypt.hashpw(doador.getSenha(), BCrypt.gensalt());
-            
+
             stmt.setString(1, doador.getNome());
             stmt.setString(2, doador.getCpf());
             stmt.setString(3, doador.getTipoSanguineo());
             stmt.setDate(4, Date.valueOf(doador.getDataNascimento()));
-            stmt.setString(5, senhaHash);
-            
-            return stmt.executeUpdate() > 0;
-            
+            stmt.setString(5, doador.getSenha()); // Senha já deve ser um hash!
+            stmt.executeUpdate();
+
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao cadastrar doador: " + e.getMessage());
+            System.err.println("Erro ao salvar doador: " + e.getMessage());
         }
     }
 
     // Método 2: Atualizar doador
     public void atualizar(Doador doador) {
         String sql = "UPDATE doadores SET nome = ?, cpf = ?, tipo_sanguineo = ?, data_nascimento = ?, senha = ? WHERE id = ?";
+        
+        if(!doador.getSenha().startsWith("$2a$")){
+            String senhaHash = BCrypt.hashpw(doador.getSenha(), BCrypt.gensalt());
+            doador.setSenha(senhaHash);
+        }
+        
         try (Connection conn = ConexaoBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -104,50 +111,42 @@ public class DoadorDAO {
     // Método 6: Autenticar (login)
     public Doador autenticar(String cpf, String senha) {
         String sql = "SELECT * FROM doadores WHERE cpf = ?";
-        
         try (Connection conn = ConexaoBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            
+
             stmt.setString(1, cpf);
             ResultSet rs = stmt.executeQuery();
-            
+
             if (rs.next()) {
-                String senhaHash = rs.getString("senha");
-                if (BCrypt.checkpw(senha, senhaHash)) {
-                    Doador doador = new Doador();
-                    doador.setId(rs.getInt("id"));
-                    doador.setNome(rs.getString("nome"));
-                    doador.setCpf(rs.getString("cpf"));
-                    doador.setTipoSanguineo(rs.getString("tipo_sanguineo"));
-                    doador.setDataNascimento(rs.getDate("data_nascimento").toLocalDate());
+                Doador doador = mapearDoador(rs);
+                if (BCrypt.checkpw(senha, doador.getSenha())) {
                     return doador;
                 }
             }
-            return null;
-            
+
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao autenticar doador: " + e.getMessage());
+            System.err.println("Erro ao autenticar: " + e.getMessage());
         }
+        return null;
     }
 
     // Método 7: Verificar CPF existente
     public boolean verificarCpfExistente(String cpf) {
         String sql = "SELECT COUNT(*) FROM doadores WHERE cpf = ?";
-        
         try (Connection conn = ConexaoBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            
+
             stmt.setString(1, cpf);
             ResultSet rs = stmt.executeQuery();
-            
+
             if (rs.next()) {
                 return rs.getInt(1) > 0;
             }
-            return false;
-            
+
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao verificar CPF: " + e.getMessage());
+            System.err.println("Erro ao verificar CPF: " + e.getMessage());
         }
+        return false;
     }
 
     // Método 8: Buscar por tipo sanguíneo
