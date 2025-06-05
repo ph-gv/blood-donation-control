@@ -1,4 +1,5 @@
 com\mycompany\projeto\ods\dao\DoadorDAO.class
-com\mycompany\projeto\ods\Main.class
 com\mycompany\projeto\ods\model\Doador.class
+com\mycompany\projeto\ods\view\LoginScreen.class
 com\mycompany\projeto\ods\util\ConexaoBD.class
+com\mycompany\projeto\ods\view\LoginScreen$1.class
