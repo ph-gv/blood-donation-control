@@ -108,9 +108,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
      * Abre a tela de edição de perfil (EditarPerfilScreen) e fecha este menu.
      */
     private void btnEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarPerfilActionPerformed
-        //EditarPerfilScreen telaEditar = new EditarPerfilScreen(usuario);
-        //telaEditar.setVisible(true);
-        //this.dispose();
+        EditarPerfilScreen telaEditar = new EditarPerfilScreen(usuario);
+        telaEditar.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnEditarPerfilActionPerformed
 
     /**
