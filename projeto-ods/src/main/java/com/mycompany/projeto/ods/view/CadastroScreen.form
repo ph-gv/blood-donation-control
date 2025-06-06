@@ -26,25 +26,25 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                      <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtNome" max="32767" attributes="0"/>
                           <Component id="txtCpf" max="32767" attributes="0"/>
                           <Component id="cmbTipoSanguineo" alignment="0" pref="300" max="32767" attributes="0"/>
-                          <Component id="txtDataNascimento" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtSenha" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblNome" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblCPF" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblSenha" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblDataNascimento" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblTipoSanguineo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fmtDataNascimento" max="32767" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                      <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                      <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="0" pref="107" max="32767" attributes="0"/>
@@ -69,8 +69,8 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lblDataNascimento" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="txtDataNascimento" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="fmtDataNascimento" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="lblSenha" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="txtSenha" min="-2" max="-2" attributes="0"/>
@@ -147,11 +147,6 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtDataNascimento">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDataNascimentoActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="btnVoltar">
       <Properties>
         <Property name="text" type="java.lang.String" value="VOLTAR"/>
@@ -166,6 +161,11 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalvarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="fmtDataNascimento">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fmtDataNascimentoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

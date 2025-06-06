@@ -26,6 +26,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
     public EditarPerfilScreen() {
         this.usuario = null;
         initComponents();
+        setLocationRelativeTo(null);
         configuraMaskData();
     }
 
@@ -35,6 +36,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
     public EditarPerfilScreen(Doador usuario) {
         this.usuario = Objects.requireNonNull(usuario);
         initComponents();
+        setLocationRelativeTo(null);
         configuraMaskData();
         populaCampos();
     }    

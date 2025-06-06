@@ -10,6 +10,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal(Doador usuario) {
         this.usuario = usuario;
         initComponents();
+        setLocationRelativeTo(null);
         exibirBoasVindas();
     }
     

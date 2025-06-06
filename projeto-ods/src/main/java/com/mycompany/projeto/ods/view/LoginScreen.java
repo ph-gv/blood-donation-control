@@ -9,6 +9,7 @@ public class LoginScreen extends javax.swing.JFrame {
 
     public LoginScreen() {
         initComponents();
+        setLocationRelativeTo(null);
         //Muda o foco para o campo de CPF
         txtCpf.requestFocusInWindow();
     }

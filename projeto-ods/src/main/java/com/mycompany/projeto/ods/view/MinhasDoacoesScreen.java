@@ -20,12 +20,14 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
     public MinhasDoacoesScreen() {
         this.usuario = null;
         initComponents();
+        setLocationRelativeTo(null);
         carregaTabela();
     }
     
     public MinhasDoacoesScreen(Doador usuario) {
         this.usuario = Objects.requireNonNull(usuario);
         initComponents();
+        setLocationRelativeTo(null);
         carregaTabela();
     }
 

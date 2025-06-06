@@ -24,21 +24,23 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="fmtData" min="-2" max="-2" attributes="0"/>
                   <Component id="lblSelecioneLocal" min="-2" pref="122" max="-2" attributes="0"/>
+                  <Component id="lblData" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                  <Component id="lblHora" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                  <Component id="cmbHemocentros" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnVoltar" min="-2" pref="85" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnVoltar" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="fmtHora" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="btnAgendar" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lblHora" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                  <Component id="lblData" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                  <Component id="cmbHemocentros" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fmtData" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fmtHora" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="165" max="32767" attributes="0"/>
+              <EmptySpace pref="152" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

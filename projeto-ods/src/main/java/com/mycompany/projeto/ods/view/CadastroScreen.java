@@ -2,16 +2,21 @@ package com.mycompany.projeto.ods.view;
 
 import com.mycompany.projeto.ods.dao.DoadorDAO;
 import com.mycompany.projeto.ods.model.Doador;
+import java.text.ParseException;
 import javax.swing.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Arrays;
+import javax.swing.text.DefaultFormatterFactory;
+import javax.swing.text.MaskFormatter;
 
 public class CadastroScreen extends javax.swing.JFrame {
 
     public CadastroScreen() {
         initComponents();
+        setLocationRelativeTo(null);
+        configuraFormatters();
     }
 
     @SuppressWarnings("unchecked")
@@ -27,9 +32,9 @@ public class CadastroScreen extends javax.swing.JFrame {
         txtCpf = new javax.swing.JTextField();
         txtSenha = new javax.swing.JPasswordField();
         cmbTipoSanguineo = new javax.swing.JComboBox<>();
-        txtDataNascimento = new javax.swing.JTextField();
         btnVoltar = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
+        fmtDataNascimento = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,12 +73,6 @@ public class CadastroScreen extends javax.swing.JFrame {
             }
         });
 
-        txtDataNascimento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDataNascimentoActionPerformed(evt);
-            }
-        });
-
         btnVoltar.setText("VOLTAR");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +87,12 @@ public class CadastroScreen extends javax.swing.JFrame {
             }
         });
 
+        fmtDataNascimento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fmtDataNascimentoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,23 +100,23 @@ public class CadastroScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(btnVoltar)
+                        .addGap(67, 67, 67)
+                        .addComponent(btnSalvar))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNome)
                             .addComponent(txtCpf)
                             .addComponent(cmbTipoSanguineo, 0, 300, Short.MAX_VALUE)
-                            .addComponent(txtDataNascimento)
                             .addComponent(txtSenha)
                             .addComponent(lblNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblCPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblTipoSanguineo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(btnVoltar)
-                        .addGap(67, 67, 67)
-                        .addComponent(btnSalvar)))
+                            .addComponent(lblTipoSanguineo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fmtDataNascimento))))
                 .addGap(0, 107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -132,8 +137,8 @@ public class CadastroScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblDataNascimento)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(fmtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(lblSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,12 +165,8 @@ public class CadastroScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCpfActionPerformed
 
     private void cmbTipoSanguineoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoSanguineoActionPerformed
-        txtDataNascimento.requestFocusInWindow();
+        fmtDataNascimento.requestFocusInWindow();
     }//GEN-LAST:event_cmbTipoSanguineoActionPerformed
-
-    private void txtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascimentoActionPerformed
-        txtSenha.requestFocusInWindow();
-    }//GEN-LAST:event_txtDataNascimentoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         new LoginScreen().setVisible(true);
@@ -177,7 +178,7 @@ public class CadastroScreen extends javax.swing.JFrame {
         String nome = txtNome.getText().trim();
         String cpf = txtCpf.getText().replaceAll("\\D", "");
         String tipo = (String) cmbTipoSanguineo.getSelectedItem();
-        String dataStr = txtDataNascimento.getText().trim();
+        String dataStr = fmtDataNascimento.getText().trim();
         char[] senhaChars = txtSenha.getPassword();
         String senha = new String(senhaChars);
 
@@ -207,7 +208,7 @@ public class CadastroScreen extends javax.swing.JFrame {
             "Erro de Validação",
             JOptionPane.ERROR_MESSAGE
         );
-        txtDataNascimento.requestFocusInWindow();
+        fmtDataNascimento.requestFocusInWindow();
         return;
     }
 
@@ -249,6 +250,21 @@ public class CadastroScreen extends javax.swing.JFrame {
             Arrays.fill(senhaChars, '0');
         }
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void fmtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmtDataNascimentoActionPerformed
+        txtSenha.requestFocusInWindow();
+    }//GEN-LAST:event_fmtDataNascimentoActionPerformed
+    
+    private void configuraFormatters() {
+        try {
+            // Máscara para data: DD/MM/AAAA
+            MaskFormatter mfData = new MaskFormatter("##/##/####");
+            mfData.setPlaceholderCharacter('_');
+            fmtDataNascimento.setFormatterFactory(new DefaultFormatterFactory(mfData));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
     
     public static void main(String args[]) {
         try {
@@ -273,13 +289,13 @@ public class CadastroScreen extends javax.swing.JFrame {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JComboBox<String> cmbTipoSanguineo;
+    private javax.swing.JFormattedTextField fmtDataNascimento;
     private javax.swing.JLabel lblCPF;
     private javax.swing.JLabel lblDataNascimento;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JLabel lblTipoSanguineo;
     private javax.swing.JTextField txtCpf;
-    private javax.swing.JTextField txtDataNascimento;
     private javax.swing.JTextField txtNome;
     private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
