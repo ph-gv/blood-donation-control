@@ -38,14 +38,19 @@ public class CadastroScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblNome.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblNome.setText("Nome:");
 
+        lblSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblSenha.setText("Senha:");
 
+        lblDataNascimento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblDataNascimento.setText("Data de Nascimento:");
 
+        lblCPF.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblCPF.setText("CPF:");
 
+        lblTipoSanguineo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblTipoSanguineo.setText("Tipo Sanguíneo:");
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -73,14 +78,20 @@ public class CadastroScreen extends javax.swing.JFrame {
             }
         });
 
+        btnVoltar.setBackground(new java.awt.Color(204, 204, 204));
+        btnVoltar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnVoltar.setText("VOLTAR");
+        btnVoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
 
+        btnSalvar.setBackground(new java.awt.Color(204, 255, 204));
+        btnSalvar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnSalvar.setText("SALVAR");
+        btnSalvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarActionPerformed(evt);
@@ -100,10 +111,10 @@ public class CadastroScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(btnVoltar)
-                        .addGap(67, 67, 67)
-                        .addComponent(btnSalvar))
+                        .addGap(138, 138, 138)
+                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -116,7 +127,7 @@ public class CadastroScreen extends javax.swing.JFrame {
                             .addComponent(lblSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblTipoSanguineo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(fmtDataNascimento))))
+                            .addComponent(fmtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -144,8 +155,8 @@ public class CadastroScreen extends javax.swing.JFrame {
                 .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnSalvar))
+                    .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 

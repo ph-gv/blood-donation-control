@@ -45,6 +45,7 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblTituloMinhasDoacoes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblTituloMinhasDoacoes.setText("MINHAS DOAÇÕES");
 
         tblDoacoes.setModel(new javax.swing.table.DefaultTableModel(
@@ -62,14 +63,20 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
 
         scrollDoacoes.setViewportView(jScrollPane1);
 
+        btnVoltarMinhasDoacoes.setBackground(new java.awt.Color(204, 204, 204));
+        btnVoltarMinhasDoacoes.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnVoltarMinhasDoacoes.setText("VOLTAR");
+        btnVoltarMinhasDoacoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnVoltarMinhasDoacoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarMinhasDoacoesActionPerformed(evt);
             }
         });
 
+        btnCancelarDoacao.setBackground(new java.awt.Color(255, 102, 102));
+        btnCancelarDoacao.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnCancelarDoacao.setText("CANCELAR");
+        btnCancelarDoacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCancelarDoacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarDoacaoActionPerformed(evt);
@@ -89,10 +96,10 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
                         .addGap(207, 207, 207)
                         .addComponent(lblTituloMinhasDoacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panMinhasDoacoesLayout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(btnCancelarDoacao)
-                        .addGap(86, 86, 86)
-                        .addComponent(btnVoltarMinhasDoacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(117, 117, 117)
+                        .addComponent(btnCancelarDoacao, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98)
+                        .addComponent(btnVoltarMinhasDoacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         panMinhasDoacoesLayout.setVerticalGroup(
@@ -106,7 +113,7 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
                 .addGroup(panMinhasDoacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarDoacao)
                     .addComponent(btnVoltarMinhasDoacoes))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
