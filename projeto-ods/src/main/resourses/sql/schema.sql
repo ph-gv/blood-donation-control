@@ -42,3 +42,10 @@ CREATE TABLE doacoes (
     FOREIGN KEY (id_doador) REFERENCES doadores(id),
     FOREIGN KEY (id_local_coleta) REFERENCES locais_coleta(id)
 );
+
+
+-- Adição dos Homocentros 
+INSERT INTO locais_coleta values
+(1, "Hemocentro da Santa Casa", "Rua 1", 5),
+(2, "Hemocentro São Lucas", "Rua 2", 3),
+(3, "Hemocentro UNIFESP", "Rua 3", 7);

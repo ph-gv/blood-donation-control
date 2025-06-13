@@ -68,7 +68,6 @@ public class LoginScreen extends javax.swing.JFrame {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\clauv\\OneDrive\\Documentos\\projeto\\project-ods\\projeto-ods\\src\\main\\resourses\\icons\\ods3.png")); // NOI18N
-        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
