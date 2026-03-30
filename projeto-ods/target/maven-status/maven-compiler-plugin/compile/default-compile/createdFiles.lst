@@ -38,6 +38,7 @@ com\mycompany\projeto\ods\view\MinhasDoacoesScreen$1.class
 com\mycompany\projeto\ods\view\EditarPerfilScreen$6.class
 com\mycompany\projeto\ods\view\DoacaoScreen.class
 com\mycompany\projeto\ods\model\Doacao.class
+com\mycompany\projeto\ods\util\BancoDadosException.class
 com\mycompany\projeto\ods\view\CadastroScreen$2.class
 com\mycompany\projeto\ods\view\CadastroScreen$5.class
 com\mycompany\projeto\ods\view\DoacaoScreen$1.class
