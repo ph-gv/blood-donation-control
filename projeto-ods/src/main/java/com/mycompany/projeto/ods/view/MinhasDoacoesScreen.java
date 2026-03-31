@@ -45,6 +45,8 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panMinhasDoacoes.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         lblTituloMinhasDoacoes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblTituloMinhasDoacoes.setText("MINHAS DOAÇÕES");
 
@@ -73,7 +75,7 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
             }
         });
 
-        btnCancelarDoacao.setBackground(new java.awt.Color(255, 102, 102));
+        btnCancelarDoacao.setBackground(new java.awt.Color(192, 57, 43));
         btnCancelarDoacao.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnCancelarDoacao.setText("CANCELAR");
         btnCancelarDoacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -100,7 +102,7 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
                         .addComponent(btnCancelarDoacao, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(98, 98, 98)
                         .addComponent(btnVoltarMinhasDoacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         panMinhasDoacoesLayout.setVerticalGroup(
             panMinhasDoacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +115,7 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
                 .addGroup(panMinhasDoacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarDoacao)
                     .addComponent(btnVoltarMinhasDoacoes))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

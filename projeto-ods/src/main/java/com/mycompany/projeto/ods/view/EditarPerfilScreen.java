@@ -79,18 +79,22 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
         lblSenha.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         lblSenha.setText("Senha:");
 
+        txtNomePerfil.setBackground(new java.awt.Color(232, 160, 154));
         txtNomePerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomePerfilActionPerformed(evt);
             }
         });
 
+        txtCpfPerfil.setBackground(new java.awt.Color(232, 160, 154));
         txtCpfPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCpfPerfilActionPerformed(evt);
             }
         });
 
+        cmbTipoPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        cmbTipoPerfil.setForeground(new java.awt.Color(44, 44, 42));
         cmbTipoPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         cmbTipoPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,12 +102,14 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
             }
         });
 
+        txtSenhaPerfil.setBackground(new java.awt.Color(232, 160, 154));
         txtSenhaPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSenhaPerfilActionPerformed(evt);
             }
         });
 
+        fmtDataPerfil.setBackground(new java.awt.Color(232, 160, 154));
         fmtDataPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtDataPerfilActionPerformed(evt);
@@ -120,7 +126,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
             }
         });
 
-        btnSalvarPerfil.setBackground(new java.awt.Color(204, 255, 204));
+        btnSalvarPerfil.setBackground(new java.awt.Color(46, 139, 87));
         btnSalvarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnSalvarPerfil.setText("SALVAR");
         btnSalvarPerfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

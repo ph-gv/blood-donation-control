@@ -26,13 +26,15 @@ public class LoginScreen extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabelSenha1 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(232, 160, 154));
 
-        jLabelCpf.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabelCpf.setText("CPF:");
+        jLabelCpf.setFont(new java.awt.Font("Segoe UI Semibold", 2, 12)); // NOI18N
+        jLabelCpf.setText("Olá Seja Bem-Vindo(a)");
 
         jLabelSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelSenha.setText("Senha:");
@@ -49,7 +51,7 @@ public class LoginScreen extends javax.swing.JFrame {
             }
         });
 
-        btnLogin.setBackground(new java.awt.Color(204, 255, 204));
+        btnLogin.setBackground(new java.awt.Color(232, 160, 154));
         btnLogin.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnLogin.setText("ENTRAR");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +60,7 @@ public class LoginScreen extends javax.swing.JFrame {
             }
         });
 
-        btnCadastrar.setBackground(new java.awt.Color(204, 255, 204));
+        btnCadastrar.setBackground(new java.awt.Color(46, 139, 87));
         btnCadastrar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnCadastrar.setText("CADASTRAR");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +69,8 @@ public class LoginScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\clauv\\OneDrive\\Documentos\\projeto\\project-ods\\projeto-ods\\src\\main\\resourses\\icons\\ods3.png")); // NOI18N
+        jLabelSenha1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabelSenha1.setText("Login:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,17 +81,23 @@ public class LoginScreen extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(224, 224, 224))
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnCadastrar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(txtSenha)
-                        .addComponent(txtCpf)
-                        .addComponent(jLabelSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnCadastrar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                                    .addComponent(txtCpf))
+                                .addComponent(jLabelSenha1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addComponent(jLabelCpf)))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -96,19 +105,21 @@ public class LoginScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(96, 96, 96)
                 .addComponent(jLabelCpf)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelSenha1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(jLabelSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLogin)
-                    .addComponent(btnCadastrar))
-                .addContainerGap(91, Short.MAX_VALUE))
+                    .addComponent(btnCadastrar)
+                    .addComponent(btnLogin))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         pack();
@@ -237,6 +248,7 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelCpf;
     private javax.swing.JLabel jLabelSenha;
+    private javax.swing.JLabel jLabelSenha1;
     private javax.swing.JTextField txtCpf;
     private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
