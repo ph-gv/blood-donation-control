@@ -32,11 +32,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblBoasVindas.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        lblBoasVindas.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblBoasVindas.setText("Olá, Seja muito(a) Bem-Vindo(a)");
 
         btnAgendar.setBackground(new java.awt.Color(46, 139, 87));
-        btnAgendar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnAgendar.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnAgendar.setForeground(new java.awt.Color(255, 255, 255));
         btnAgendar.setText("Agendar Doação");
         btnAgendar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAgendar.addActionListener(new java.awt.event.ActionListener() {
@@ -46,7 +47,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         btnMeusAgendamentos.setBackground(new java.awt.Color(46, 139, 87));
-        btnMeusAgendamentos.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnMeusAgendamentos.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnMeusAgendamentos.setForeground(new java.awt.Color(255, 255, 255));
         btnMeusAgendamentos.setText("Meus Agendamentos");
         btnMeusAgendamentos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnMeusAgendamentos.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +58,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         btnEditarPerfil.setBackground(new java.awt.Color(46, 139, 87));
-        btnEditarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnEditarPerfil.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnEditarPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarPerfil.setText("Editar Perfil");
         btnEditarPerfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnEditarPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +69,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         btnSair.setBackground(new java.awt.Color(192, 57, 43));
-        btnSair.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnSair.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnSair.setForeground(new java.awt.Color(255, 255, 255));
         btnSair.setText("Sair");
         btnSair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -77,17 +81,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel1.setText("\n");
 
-        lblBoasVindas1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        lblBoasVindas1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblBoasVindas1.setText("Conheça uma forma simples e rápida de agendar sua doação de sangue.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 64, Short.MAX_VALUE)
-                .addComponent(lblBoasVindas1)
-                .addGap(36, 36, 36))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -101,28 +101,31 @@ public class MenuPrincipal extends javax.swing.JFrame {
                             .addComponent(btnEditarPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(147, 147, 147)
+                        .addGap(45, 45, 45)
+                        .addComponent(lblBoasVindas1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
                         .addComponent(lblBoasVindas)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(23, 23, 23)
+                .addGap(44, 44, 44)
                 .addComponent(lblBoasVindas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(lblBoasVindas1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(27, 27, 27)
                 .addComponent(btnAgendar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnMeusAgendamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnEditarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         pack();

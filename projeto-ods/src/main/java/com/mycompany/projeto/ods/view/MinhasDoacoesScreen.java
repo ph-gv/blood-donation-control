@@ -65,8 +65,9 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
 
         scrollDoacoes.setViewportView(jScrollPane1);
 
-        btnVoltarMinhasDoacoes.setBackground(new java.awt.Color(204, 204, 204));
-        btnVoltarMinhasDoacoes.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnVoltarMinhasDoacoes.setBackground(new java.awt.Color(232, 160, 154));
+        btnVoltarMinhasDoacoes.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        btnVoltarMinhasDoacoes.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltarMinhasDoacoes.setText("VOLTAR");
         btnVoltarMinhasDoacoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnVoltarMinhasDoacoes.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +77,7 @@ public class MinhasDoacoesScreen extends javax.swing.JFrame {
         });
 
         btnCancelarDoacao.setBackground(new java.awt.Color(192, 57, 43));
-        btnCancelarDoacao.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnCancelarDoacao.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         btnCancelarDoacao.setText("CANCELAR");
         btnCancelarDoacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCancelarDoacao.addActionListener(new java.awt.event.ActionListener() {

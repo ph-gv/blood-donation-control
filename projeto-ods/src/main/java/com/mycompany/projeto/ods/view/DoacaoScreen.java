@@ -60,33 +60,34 @@ public class DoacaoScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblSelecioneLocal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblSelecioneLocal.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         lblSelecioneLocal.setText("Selecione o Local:");
 
-        lblData.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblData.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         lblData.setText("Selecione a Data:");
 
-        lblHora.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblHora.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         lblHora.setText("Selecione o Horário:");
 
-        cmbHemocentros.setBackground(new java.awt.Color(232, 160, 154));
+        cmbHemocentros.setBackground(new java.awt.Color(70, 73, 55));
 
-        fmtHora.setBackground(new java.awt.Color(232, 160, 154));
+        fmtHora.setBackground(new java.awt.Color(70, 73, 55));
         fmtHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtHoraActionPerformed(evt);
             }
         });
 
-        fmtData.setBackground(new java.awt.Color(232, 160, 154));
+        fmtData.setBackground(new java.awt.Color(70, 73, 55));
         fmtData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtDataActionPerformed(evt);
             }
         });
 
-        btnVoltar.setBackground(new java.awt.Color(204, 204, 204));
-        btnVoltar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnVoltar.setBackground(new java.awt.Color(232, 160, 154));
+        btnVoltar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setText("VOLTAR");
         btnVoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -95,8 +96,8 @@ public class DoacaoScreen extends javax.swing.JFrame {
             }
         });
 
-        btnAgendar.setBackground(new java.awt.Color(46, 139, 87));
-        btnAgendar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnAgendar.setBackground(new java.awt.Color(192, 57, 43));
+        btnAgendar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnAgendar.setText("AGENDAR");
         btnAgendar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAgendar.addActionListener(new java.awt.event.ActionListener() {
@@ -105,10 +106,10 @@ public class DoacaoScreen extends javax.swing.JFrame {
             }
         });
 
-        lblHora1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblHora1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         lblHora1.setText("Doação");
 
-        lblHora2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblHora2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblHora2.setText("Agende quando você irá fazer sua doação preenchendo abaixo:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,48 +121,48 @@ public class DoacaoScreen extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(135, 135, 135)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46)
-                                .addComponent(btnAgendar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(fmtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblSelecioneLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblData, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(fmtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbHemocentros, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cmbHemocentros, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblData)
+                            .addComponent(lblHora)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(85, 85, 85)
+                                .addComponent(btnAgendar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
+                        .addGap(259, 259, 259)
                         .addComponent(lblHora1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
+                        .addGap(109, 109, 109)
                         .addComponent(lblHora2)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(lblHora1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(29, 29, 29)
                 .addComponent(lblHora2)
-                .addGap(23, 23, 23)
+                .addGap(26, 26, 26)
                 .addComponent(lblSelecioneLocal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmbHemocentros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblData)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(fmtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addGap(18, 18, 18)
                 .addComponent(lblHora)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(fmtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
                     .addComponent(btnAgendar))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(57, 57, 57))
         );
 
         pack();

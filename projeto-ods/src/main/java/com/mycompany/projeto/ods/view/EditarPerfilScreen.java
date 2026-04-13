@@ -61,40 +61,39 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblTitulo.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        lblTitulo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblTitulo.setText("EDITAR PERFIL");
 
-        lblNome.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblNome.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblNome.setText("Nome:");
 
-        lblCpf.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblCpf.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblCpf.setText("CPF:");
 
-        lblData.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblData.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblData.setText("Data de Nascimento:");
 
-        lblTipoSanguineo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTipoSanguineo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblTipoSanguineo.setText("Tipo Sanguíneo:");
 
-        lblSenha.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        lblSenha.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         lblSenha.setText("Senha:");
 
-        txtNomePerfil.setBackground(new java.awt.Color(232, 160, 154));
         txtNomePerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomePerfilActionPerformed(evt);
             }
         });
 
-        txtCpfPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        txtCpfPerfil.setEditable(false);
+        txtCpfPerfil.setBackground(new java.awt.Color(70, 73, 75));
         txtCpfPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCpfPerfilActionPerformed(evt);
             }
         });
 
-        cmbTipoPerfil.setBackground(new java.awt.Color(232, 160, 154));
-        cmbTipoPerfil.setForeground(new java.awt.Color(44, 44, 42));
+        cmbTipoPerfil.setForeground(new java.awt.Color(255, 255, 255));
         cmbTipoPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         cmbTipoPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,22 +101,21 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
             }
         });
 
-        txtSenhaPerfil.setBackground(new java.awt.Color(232, 160, 154));
         txtSenhaPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSenhaPerfilActionPerformed(evt);
             }
         });
 
-        fmtDataPerfil.setBackground(new java.awt.Color(232, 160, 154));
         fmtDataPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtDataPerfilActionPerformed(evt);
             }
         });
 
-        btnVoltarPerfil.setBackground(new java.awt.Color(204, 204, 204));
-        btnVoltarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnVoltarPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        btnVoltarPerfil.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnVoltarPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltarPerfil.setText("VOLTAR");
         btnVoltarPerfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnVoltarPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -126,8 +124,8 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
             }
         });
 
-        btnSalvarPerfil.setBackground(new java.awt.Color(46, 139, 87));
-        btnSalvarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnSalvarPerfil.setBackground(new java.awt.Color(192, 57, 43));
+        btnSalvarPerfil.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSalvarPerfil.setText("SALVAR");
         btnSalvarPerfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSalvarPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +190,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalvarPerfil)
                     .addComponent(btnVoltarPerfil))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
