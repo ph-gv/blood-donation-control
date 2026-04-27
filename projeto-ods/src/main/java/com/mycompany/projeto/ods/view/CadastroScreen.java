@@ -20,7 +20,8 @@ public class CadastroScreen extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
@@ -81,7 +82,8 @@ public class CadastroScreen extends javax.swing.JFrame {
         });
 
         cmbTipoSanguineo.setBackground(new java.awt.Color(70, 73, 55));
-        cmbTipoSanguineo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
+        cmbTipoSanguineo.setModel(new javax.swing.DefaultComboBoxModel<>(
+                new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         cmbTipoSanguineo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbTipoSanguineoActionPerformed(evt);
@@ -130,98 +132,137 @@ public class CadastroScreen extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(131, 131, 131)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblDataNascimento)
-                                .addComponent(lblSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fmtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblTipoSanguineo)
-                                .addComponent(cmbTipoSanguineo, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(42, 42, 42)
-                            .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(65, 65, 65)
-                            .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(15, 15, 15)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(303, 303, 303)
-                        .addComponent(lblTipoSanguineo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(lblTipoSanguineo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(177, Short.MAX_VALUE))
-        );
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                        .addGap(131, 131, 131)
+                                                        .addGroup(layout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(txtCpf,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 194,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(txtSenha,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 283,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(lblCPF,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 33,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(txtNome,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 158,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(lblNome,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 43,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(lblDataNascimento)
+                                                                .addComponent(lblSenha,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 115,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(fmtDataNascimento,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 283,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addGroup(layout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(lblTipoSanguineo)
+                                                                .addComponent(cmbTipoSanguineo,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 131,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout
+                                                        .createSequentialGroup()
+                                                        .addGap(42, 42, 42)
+                                                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(65, 65, 65)
+                                                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(15, 15, 15)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(303, 303, 303)
+                                                .addComponent(lblTipoSanguineo1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(183, 183, 183)
+                                                .addComponent(lblTipoSanguineo2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(177, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(lblTipoSanguineo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(lblTipoSanguineo2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(lblNome)
-                .addGap(21, 21, 21)
-                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCPF)
-                    .addComponent(lblTipoSanguineo))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbTipoSanguineo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(lblDataNascimento)
-                .addGap(18, 18, 18)
-                .addComponent(fmtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblSenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(lblTipoSanguineo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(lblTipoSanguineo2, javax.swing.GroupLayout.PREFERRED_SIZE, 30,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51,
+                                        Short.MAX_VALUE)
+                                .addComponent(lblNome)
+                                .addGap(21, 21, 21)
+                                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblCPF)
+                                        .addComponent(lblTipoSanguineo))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cmbTipoSanguineo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(lblDataNascimento)
+                                .addGap(18, 18, 18)
+                                .addComponent(fmtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblSenha)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22,
+                                        Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 23,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 23,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(22, 22, 22)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtNomeActionPerformed
         txtCpf.requestFocusInWindow();
-    }//GEN-LAST:event_txtNomeActionPerformed
+    }// GEN-LAST:event_txtNomeActionPerformed
 
-    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
+    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSenhaActionPerformed
         btnSalvarActionPerformed(evt);
-    }//GEN-LAST:event_txtSenhaActionPerformed
+    }// GEN-LAST:event_txtSenhaActionPerformed
 
-    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtCpfActionPerformed
         cmbTipoSanguineo.requestFocusInWindow();
-    }//GEN-LAST:event_txtCpfActionPerformed
+    }// GEN-LAST:event_txtCpfActionPerformed
 
-    private void cmbTipoSanguineoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoSanguineoActionPerformed
+    private void cmbTipoSanguineoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cmbTipoSanguineoActionPerformed
         fmtDataNascimento.requestFocusInWindow();
-    }//GEN-LAST:event_cmbTipoSanguineoActionPerformed
+    }// GEN-LAST:event_cmbTipoSanguineoActionPerformed
 
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnVoltarActionPerformed
         new LoginScreen().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnVoltarActionPerformed
+    }// GEN-LAST:event_btnVoltarActionPerformed
 
-    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnSalvarActionPerformed
         // Coleta dados dos campos
         String nome = txtNome.getText().trim();
         String cpf = txtCpf.getText().replaceAll("\\D", "");
@@ -233,15 +274,14 @@ public class CadastroScreen extends javax.swing.JFrame {
         // Validações
         if (nome.isEmpty() || cpf.length() != 11 || tipo == null || dataStr.isEmpty() || senha.length() < 8) {
             JOptionPane.showMessageDialog(this,
-                "Preencha todos os campos corretamente:\n" +
-                "- Nome não pode ficar vazio\n" +
-                "- CPF deve ter 11 dígitos\n" +
-                "- Selecione tipo sanguíneo\n" +
-                "- Data no formato correto (DD-MM-AAAA)\n" +
-                "- Senha mínimo 8 caracteres",
-                "Erro de Validação",
-                JOptionPane.ERROR_MESSAGE
-            );
+                    "Preencha todos os campos corretamente:\n" +
+                            "- Nome não pode ficar vazio\n" +
+                            "- CPF deve ter 11 dígitos\n" +
+                            "- Selecione tipo sanguíneo\n" +
+                            "- Data no formato correto (DD-MM-AAAA)\n" +
+                            "- Senha mínimo 8 caracteres",
+                    "Erro de Validação",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -252,22 +292,20 @@ public class CadastroScreen extends javax.swing.JFrame {
             dataNasc = LocalDate.parse(dataStr, fmtBR);
         } catch (DateTimeParseException ex) {
             JOptionPane.showMessageDialog(this,
-            "Formato de data inválido. Use DD/MM/AAAA.",
-            "Erro de Validação",
-            JOptionPane.ERROR_MESSAGE
-        );
-        fmtDataNascimento.requestFocusInWindow();
-        return;
-    }
+                    "Formato de data inválido. Use DD/MM/AAAA.",
+                    "Erro de Validação",
+                    JOptionPane.ERROR_MESSAGE);
+            fmtDataNascimento.requestFocusInWindow();
+            return;
+        }
 
         try {
             DoadorDAO dao = new DoadorDAO();
             if (dao.verificarCpfExistente(cpf)) {
                 JOptionPane.showMessageDialog(this,
-                    "CPF já cadastrado!",
-                    "Erro de Cadastro",
-                    JOptionPane.ERROR_MESSAGE
-                );
+                        "CPF já cadastrado!",
+                        "Erro de Cadastro",
+                        JOptionPane.ERROR_MESSAGE);
                 txtCpf.requestFocusInWindow();
                 return;
             }
@@ -281,28 +319,26 @@ public class CadastroScreen extends javax.swing.JFrame {
 
             dao.salvar(novo);
             JOptionPane.showMessageDialog(this,
-                "Cadastro realizado com sucesso!",
-                "Sucesso",
-                JOptionPane.INFORMATION_MESSAGE
-            );
+                    "Cadastro realizado com sucesso!",
+                    "Sucesso",
+                    JOptionPane.INFORMATION_MESSAGE);
             new LoginScreen().setVisible(true);
             this.dispose();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this,
-                "Erro ao salvar no banco: " + e.getMessage(),
-                "Erro no Sistema",
-                JOptionPane.ERROR_MESSAGE
-            );
+                    "Erro ao salvar no banco: " + e.getMessage(),
+                    "Erro no Sistema",
+                    JOptionPane.ERROR_MESSAGE);
         } finally {
             Arrays.fill(senhaChars, '0');
         }
-    }//GEN-LAST:event_btnSalvarActionPerformed
+    }// GEN-LAST:event_btnSalvarActionPerformed
 
-    private void fmtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmtDataNascimentoActionPerformed
+    private void fmtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fmtDataNascimentoActionPerformed
         txtSenha.requestFocusInWindow();
-    }//GEN-LAST:event_fmtDataNascimentoActionPerformed
-    
+    }// GEN-LAST:event_fmtDataNascimentoActionPerformed
+
     private void configuraFormatters() {
         try {
             // Máscara para data: DD/MM/AAAA
@@ -313,7 +349,7 @@ public class CadastroScreen extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -325,7 +361,7 @@ public class CadastroScreen extends javax.swing.JFrame {
         } catch (Exception ex) {
             // Se não encontrar, segue com o default
         }
-        
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CadastroScreen().setVisible(true);

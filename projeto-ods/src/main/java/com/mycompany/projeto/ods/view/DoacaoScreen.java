@@ -20,7 +20,7 @@ import java.util.Objects;
 public class DoacaoScreen extends javax.swing.JFrame {
 
     private final Doador usuario;
-    
+
     /**
      * Construtor padrão para testes isolados.
      */
@@ -44,7 +44,8 @@ public class DoacaoScreen extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lblSelecioneLocal = new javax.swing.JLabel();
@@ -115,72 +116,87 @@ public class DoacaoScreen extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fmtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSelecioneLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fmtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbHemocentros, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblData)
-                            .addComponent(lblHora)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(85, 85, 85)
-                                .addComponent(btnAgendar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(259, 259, 259)
-                        .addComponent(lblHora1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(lblHora2)))
-                .addContainerGap(131, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(135, 135, 135)
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(fmtData, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(lblSelecioneLocal,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 122,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(fmtHora, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(cmbHemocentros,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 240,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(lblData)
+                                                        .addComponent(lblHora)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(btnVoltar,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 85,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(85, 85, 85)
+                                                                .addComponent(btnAgendar,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 85,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(259, 259, 259)
+                                                .addComponent(lblHora1))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(109, 109, 109)
+                                                .addComponent(lblHora2)))
+                                .addContainerGap(131, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(lblHora1)
-                .addGap(29, 29, 29)
-                .addComponent(lblHora2)
-                .addGap(26, 26, 26)
-                .addComponent(lblSelecioneLocal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmbHemocentros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblData)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fmtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblHora)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fmtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnAgendar))
-                .addGap(57, 57, 57))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(26, Short.MAX_VALUE)
+                                .addComponent(lblHora1)
+                                .addGap(29, 29, 29)
+                                .addComponent(lblHora2)
+                                .addGap(26, 26, 26)
+                                .addComponent(lblSelecioneLocal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cmbHemocentros, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblData)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(fmtData, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblHora)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(fmtHora, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnVoltar)
+                                        .addComponent(btnAgendar))
+                                .addGap(57, 57, 57)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
-        
+    private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnAgendarActionPerformed
+
         // 1) Primeiro, pega a string que foi adicionada ao combo:
         String nomeSelecionado = (String) cmbHemocentros.getSelectedItem();
         // 2) Busca o objeto Hemocentro correspondente no banco
         Hemocentro selecionado = new HemocentroDAO().buscarPorNome(nomeSelecionado);
         if (selecionado == null) {
-            JOptionPane.showMessageDialog(this, "Selecione um hemocentro.", "Erro de Validação", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Selecione um hemocentro.", "Erro de Validação",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        String dataStr = fmtData.getText();   // ex.: "25/12/1990"
-        String horaStr = fmtHora.getText();   // ex.: "14:30"
+        String dataStr = fmtData.getText(); // ex.: "25/12/1990"
+        String horaStr = fmtHora.getText(); // ex.: "14:30"
 
         // Converter data e hora
         LocalDate data;
@@ -189,7 +205,8 @@ public class DoacaoScreen extends javax.swing.JFrame {
             DateTimeFormatter fmtBR = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             data = LocalDate.parse(dataStr, fmtBR);
         } catch (DateTimeParseException ex) {
-            JOptionPane.showMessageDialog(this, "Data inválida. Use DD/MM/AAAA.", "Erro de Validação", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Data inválida. Use DD/MM/AAAA.", "Erro de Validação",
+                    JOptionPane.ERROR_MESSAGE);
             fmtData.requestFocusInWindow();
             return;
         }
@@ -197,14 +214,16 @@ public class DoacaoScreen extends javax.swing.JFrame {
             DateTimeFormatter fmtHoraPattern = DateTimeFormatter.ofPattern("HH:mm");
             hora = LocalTime.parse(horaStr, fmtHoraPattern);
         } catch (DateTimeParseException ex) {
-            JOptionPane.showMessageDialog(this, "Horário inválido. Use HH:mm.", "Erro de Validação", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Horário inválido. Use HH:mm.", "Erro de Validação",
+                    JOptionPane.ERROR_MESSAGE);
             fmtHora.requestFocusInWindow();
             return;
         }
 
         LocalDateTime dataHora = LocalDateTime.of(data, hora);
         if (dataHora.isBefore(LocalDateTime.now())) {
-            JOptionPane.showMessageDialog(this, "Não é possível agendar em horário passado.", "Erro de Validação", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Não é possível agendar em horário passado.", "Erro de Validação",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -212,7 +231,8 @@ public class DoacaoScreen extends javax.swing.JFrame {
         DoacaoDAO dDao = new DoacaoDAO();
         boolean disponivel = dDao.verificarDisponibilidade(selecionado.getId(), data, hora);
         if (!disponivel) {
-            JOptionPane.showMessageDialog(this, "Horário indisponível neste hemocentro.", "Erro de Disponibilidade", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Horário indisponível neste hemocentro.", "Erro de Disponibilidade",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -230,11 +250,12 @@ public class DoacaoScreen extends javax.swing.JFrame {
             new MenuPrincipal(usuario).setVisible(true);
             this.dispose();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Erro ao agendar: " + e.getMessage(), "Erro no Sistema", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao agendar: " + e.getMessage(), "Erro no Sistema",
+                    JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_btnAgendarActionPerformed
+    }// GEN-LAST:event_btnAgendarActionPerformed
 
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnVoltarActionPerformed
         // Volta ao menu principal
         if (usuario != null) {
             new MenuPrincipal(usuario).setVisible(true);
@@ -242,17 +263,17 @@ public class DoacaoScreen extends javax.swing.JFrame {
             new LoginScreen().setVisible(true); // caso de teste isolado
         }
         this.dispose();
-    }//GEN-LAST:event_btnVoltarActionPerformed
+    }// GEN-LAST:event_btnVoltarActionPerformed
 
-    private void fmtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmtDataActionPerformed
+    private void fmtDataActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fmtDataActionPerformed
         // Focar no campo de horário ao pressionar Enter na data
         fmtHora.requestFocusInWindow();
-    }//GEN-LAST:event_fmtDataActionPerformed
+    }// GEN-LAST:event_fmtDataActionPerformed
 
-    private void fmtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmtHoraActionPerformed
+    private void fmtHoraActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fmtHoraActionPerformed
         // Focar no botão Agendar ao pressionar Enter no horário
         btnAgendar.requestFocusInWindow();
-    }//GEN-LAST:event_fmtHoraActionPerformed
+    }// GEN-LAST:event_fmtHoraActionPerformed
 
     /**
      * Configura as máscaras de data e horário para o JFormattedTextField
@@ -290,7 +311,7 @@ public class DoacaoScreen extends javax.swing.JFrame {
             }
         }
     }
-    
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

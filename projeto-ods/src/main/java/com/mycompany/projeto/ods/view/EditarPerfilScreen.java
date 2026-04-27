@@ -31,6 +31,38 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
         populaCampos();
     }
 
+    private void configuraMaskData() {
+        try {
+            MaskFormatter mask = new MaskFormatter("##/##/####");
+            mask.setPlaceholderCharacter('_');
+            fmtDataPerfil.setFormatterFactory(new DefaultFormatterFactory(mask));
+        } catch (ParseException e) {
+            System.err.println("Erro ao configurar máscara de data: " + e.getMessage());
+        }
+    }
+
+    private void populaCampos() {
+        if (usuario != null) {
+            txtNomePerfil.setText(usuario.getNome());
+            txtNomePerfil.setEditable(false);
+            txtNomePerfil.setBackground(new java.awt.Color(200, 200, 200));
+
+            txtCpfPerfil.setText(usuario.getCpf());
+            txtCpfPerfil.setEditable(false);
+            txtCpfPerfil.setBackground(new java.awt.Color(200, 200, 200));
+
+            cmbTipoPerfil.setSelectedItem(usuario.getTipoSanguineo());
+            cmbTipoPerfil.setEnabled(false);
+            cmbTipoPerfil.setBackground(new java.awt.Color(200, 200, 200));
+
+            if (usuario.getDataNascimento() != null) {
+                fmtDataPerfil.setText(usuario.getDataNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+            }
+            fmtDataPerfil.setEditable(false);
+            fmtDataPerfil.setBackground(new java.awt.Color(200, 200, 200));
+        }
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
@@ -71,22 +103,17 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
         lblSenha.setText("Nova Senha:");
 
         txtNomePerfil.setBackground(new java.awt.Color(232, 160, 154));
-        txtNomePerfil.addActionListener(evt -> txtNomePerfilActionPerformed(evt));
 
         txtCpfPerfil.setBackground(new java.awt.Color(232, 160, 154));
-        txtCpfPerfil.addActionListener(evt -> txtCpfPerfilActionPerformed(evt));
 
         cmbTipoPerfil.setBackground(new java.awt.Color(232, 160, 154));
         cmbTipoPerfil.setForeground(new java.awt.Color(44, 44, 42));
         cmbTipoPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(
                 new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
-        cmbTipoPerfil.addActionListener(evt -> cmbTipoPerfilActionPerformed(evt));
 
         txtSenhaPerfil.setBackground(new java.awt.Color(232, 160, 154));
-        txtSenhaPerfil.addActionListener(evt -> txtSenhaPerfilActionPerformed(evt));
 
         fmtDataPerfil.setBackground(new java.awt.Color(232, 160, 154));
-        fmtDataPerfil.addActionListener(evt -> fmtDataPerfilActionPerformed(evt));
 
         btnVoltarPerfil.setBackground(new java.awt.Color(204, 204, 204));
         btnVoltarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12));
@@ -135,7 +162,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
                                         .addComponent(lblSenha, javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(fmtDataPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                100,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         layout.setVerticalGroup(
@@ -177,60 +204,16 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void populaCampos() {
-        txtNomePerfil.setText(usuario.getNome());
-        txtNomePerfil.setEditable(false);
-        txtNomePerfil.setBackground(new java.awt.Color(200, 200, 200));
-
-        txtCpfPerfil.setText(usuario.getCpf());
-        txtCpfPerfil.setEditable(false);
-        txtCpfPerfil.setBackground(new java.awt.Color(200, 200, 200));
-
-        cmbTipoPerfil.setSelectedItem(usuario.getTipoSanguineo());
-        cmbTipoPerfil.setEnabled(false);
-        cmbTipoPerfil.setBackground(new java.awt.Color(200, 200, 200));
-
-        DateTimeFormatter fmtBR = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        fmtDataPerfil.setText(usuario.getDataNascimento().format(fmtBR));
-        fmtDataPerfil.setEditable(false);
-        fmtDataPerfil.setBackground(new java.awt.Color(200, 200, 200));
-    }
-
-    private void configuraMaskData() {
-        try {
-            MaskFormatter mf = new MaskFormatter("##/##/####");
-            mf.setPlaceholderCharacter('_');
-            fmtDataPerfil.setFormatterFactory(new DefaultFormatterFactory(mf));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void txtNomePerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtNomePerfilActionPerformed
-    }// GEN-LAST:event_txtNomePerfilActionPerformed
-
-    private void txtCpfPerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtCpfPerfilActionPerformed
-    }// GEN-LAST:event_txtCpfPerfilActionPerformed
-
-    private void cmbTipoPerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cmbTipoPerfilActionPerformed
-    }// GEN-LAST:event_cmbTipoPerfilActionPerformed
-
-    private void fmtDataPerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fmtDataPerfilActionPerformed
-    }// GEN-LAST:event_fmtDataPerfilActionPerformed
-
-    private void txtSenhaPerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSenhaPerfilActionPerformed
-    }// GEN-LAST:event_txtSenhaPerfilActionPerformed
-
-    private void btnVoltarPerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnVoltarPerfilActionPerformed
+    private void btnVoltarPerfilActionPerformed(java.awt.event.ActionEvent evt) {
         if (usuario != null) {
             new MenuPrincipal(usuario).setVisible(true);
         } else {
             new LoginScreen().setVisible(true);
         }
         this.dispose();
-    }// GEN-LAST:event_btnVoltarPerfilActionPerformed
+    }
 
-    private void btnSalvarPerfilActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnSalvarPerfilActionPerformed
+    private void btnSalvarPerfilActionPerformed(java.awt.event.ActionEvent evt) {
         char[] senhaChars = txtSenhaPerfil.getPassword();
         String senha = new String(senhaChars);
 
@@ -260,7 +243,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
         } finally {
             Arrays.fill(senhaChars, '0');
         }
-    }// GEN-LAST:event_btnSalvarPerfilActionPerformed
+    }
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> new EditarPerfilScreen().setVisible(true));

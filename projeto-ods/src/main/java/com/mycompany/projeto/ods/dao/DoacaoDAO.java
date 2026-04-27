@@ -47,7 +47,6 @@ public class DoacaoDAO {
                     agendadosNoDia = rs.getInt(1);
                 }
             }
-
             int capacidadeMaxima = 0;
             try (PreparedStatement stmt = conn.prepareStatement(sqlCapacidade)) {
                 stmt.setInt(1, idLocal);
@@ -83,7 +82,6 @@ public class DoacaoDAO {
             if (rs.next()) {
                 d.setIdDoacao(rs.getInt(1));
             }
-
         } catch (SQLException e) {
             throw new BancoDadosException("Erro ao salvar agendamento de doação", e);
         }
@@ -109,7 +107,6 @@ public class DoacaoDAO {
                 d.setStatus(rs.getString("status"));
                 lista.add(d);
             }
-
         } catch (SQLException e) {
             LOG.log(Level.SEVERE, "Erro ao listar doações do doador id=" + idDoador, e);
         }
