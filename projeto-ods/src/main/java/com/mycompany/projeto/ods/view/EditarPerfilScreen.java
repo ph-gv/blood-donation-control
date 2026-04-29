@@ -65,7 +65,7 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lblTitulo = new javax.swing.JLabel();
@@ -84,122 +84,140 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblTitulo.setFont(new java.awt.Font("Segoe UI", 3, 12));
+        lblTitulo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblTitulo.setText("EDITAR PERFIL");
 
-        lblNome.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        lblNome.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblNome.setText("Nome:");
 
-        lblCpf.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        lblCpf.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblCpf.setText("CPF:");
 
-        lblData.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        lblData.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblData.setText("Data de Nascimento:");
 
-        lblTipoSanguineo.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        lblTipoSanguineo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         lblTipoSanguineo.setText("Tipo Sanguíneo:");
 
-        lblSenha.setFont(new java.awt.Font("Segoe UI", 3, 12));
-        lblSenha.setText("Nova Senha:");
+        lblSenha.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        lblSenha.setText("Senha:");
 
-        txtNomePerfil.setBackground(new java.awt.Color(232, 160, 154));
+        txtNomePerfil.setBackground(new java.awt.Color(204, 204, 204));
+        txtNomePerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomePerfilActionPerformed(evt);
+            }
+        });
 
-        txtCpfPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        txtCpfPerfil.setEditable(false);
+        txtCpfPerfil.setBackground(new java.awt.Color(204, 204, 204));
+        txtCpfPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCpfPerfilActionPerformed(evt);
+            }
+        });
 
-        cmbTipoPerfil.setBackground(new java.awt.Color(232, 160, 154));
-        cmbTipoPerfil.setForeground(new java.awt.Color(44, 44, 42));
-        cmbTipoPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(
-                new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
+        cmbTipoPerfil.setBackground(new java.awt.Color(204, 204, 204));
+        cmbTipoPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
+        cmbTipoPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbTipoPerfilActionPerformed(evt);
+            }
+        });
 
-        txtSenhaPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        txtSenhaPerfil.setBackground(new java.awt.Color(204, 204, 204));
+        txtSenhaPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSenhaPerfilActionPerformed(evt);
+            }
+        });
 
-        fmtDataPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        fmtDataPerfil.setBackground(new java.awt.Color(204, 204, 204));
+        fmtDataPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fmtDataPerfilActionPerformed(evt);
+            }
+        });
 
-        btnVoltarPerfil.setBackground(new java.awt.Color(204, 204, 204));
-        btnVoltarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12));
+        btnVoltarPerfil.setBackground(new java.awt.Color(232, 160, 154));
+        btnVoltarPerfil.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnVoltarPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltarPerfil.setText("VOLTAR");
         btnVoltarPerfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnVoltarPerfil.addActionListener(evt -> btnVoltarPerfilActionPerformed(evt));
+        btnVoltarPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarPerfilActionPerformed(evt);
+            }
+        });
 
-        btnSalvarPerfil.setBackground(new java.awt.Color(46, 139, 87));
-        btnSalvarPerfil.setFont(new java.awt.Font("Segoe UI", 3, 12));
+        btnSalvarPerfil.setBackground(new java.awt.Color(192, 57, 43));
+        btnSalvarPerfil.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSalvarPerfil.setText("SALVAR");
         btnSalvarPerfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnSalvarPerfil.addActionListener(evt -> btnSalvarPerfilActionPerformed(evt));
+        btnSalvarPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarPerfilActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(205, Short.MAX_VALUE)
-                                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(185, 185, 185))
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblCpf, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtNomePerfil)
-                                        .addComponent(lblNome, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtCpfPerfil)
-                                        .addComponent(lblTipoSanguineo, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cmbTipoPerfil, 0, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                Short.MAX_VALUE)
-                                        .addComponent(lblData, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtSenhaPerfil)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(btnVoltarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                        135, Short.MAX_VALUE)
-                                                .addComponent(btnSalvarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(lblSenha, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(fmtDataPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                100,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(205, Short.MAX_VALUE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(185, 185, 185))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblCpf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtNomePerfil)
+                    .addComponent(lblNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCpfPerfil)
+                    .addComponent(lblTipoSanguineo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbTipoPerfil, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtSenhaPerfil)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnVoltarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                        .addComponent(btnSalvarPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fmtDataPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(lblTitulo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblNome)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtNomePerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(9, 9, 9)
-                                .addComponent(lblCpf)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtCpfPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 22,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)
-                                .addComponent(lblTipoSanguineo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cmbTipoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblData)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fmtDataPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSenha)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtSenhaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(btnSalvarPerfil)
-                                        .addComponent(btnVoltarPerfil))
-                                .addContainerGap(23, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblNome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtNomePerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addComponent(lblCpf)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtCpfPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(lblTipoSanguineo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbTipoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblData)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fmtDataPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblSenha)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtSenhaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalvarPerfil)
+                    .addComponent(btnVoltarPerfil))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -244,6 +262,26 @@ public class EditarPerfilScreen extends javax.swing.JFrame {
             Arrays.fill(senhaChars, '0');
         }
     }
+    
+    private void txtNomePerfilActionPerformed(java.awt.event.ActionEvent evt) {
+    txtCpfPerfil.requestFocusInWindow();
+}
+
+private void txtCpfPerfilActionPerformed(java.awt.event.ActionEvent evt) {
+    cmbTipoPerfil.requestFocusInWindow();
+}
+
+private void cmbTipoPerfilActionPerformed(java.awt.event.ActionEvent evt) {
+    fmtDataPerfil.requestFocusInWindow();
+}
+
+private void txtSenhaPerfilActionPerformed(java.awt.event.ActionEvent evt) {
+    btnSalvarPerfilActionPerformed(evt);
+}
+
+private void fmtDataPerfilActionPerformed(java.awt.event.ActionEvent evt) {
+    txtSenhaPerfil.requestFocusInWindow();
+}
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> new EditarPerfilScreen().setVisible(true));

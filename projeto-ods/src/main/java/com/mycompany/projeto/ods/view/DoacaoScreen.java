@@ -70,16 +70,16 @@ public class DoacaoScreen extends javax.swing.JFrame {
         lblHora.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         lblHora.setText("Selecione o Horário:");
 
-        cmbHemocentros.setBackground(new java.awt.Color(70, 73, 55));
+        cmbHemocentros.setBackground(new java.awt.Color(204, 204, 204));
 
-        fmtHora.setBackground(new java.awt.Color(70, 73, 55));
+        fmtHora.setBackground(new java.awt.Color(204, 204, 204));
         fmtHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtHoraActionPerformed(evt);
             }
         });
 
-        fmtData.setBackground(new java.awt.Color(70, 73, 55));
+        fmtData.setBackground(new java.awt.Color(204, 204, 204));
         fmtData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtDataActionPerformed(evt);

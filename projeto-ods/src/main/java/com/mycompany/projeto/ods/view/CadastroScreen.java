@@ -42,10 +42,12 @@ public class CadastroScreen extends javax.swing.JFrame {
         lblTipoSanguineo3 = new javax.swing.JLabel();
         lblTipoSanguineo4 = new javax.swing.JLabel();
 
+        jTextField1.setForeground(new java.awt.Color(70, 73, 55));
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(232, 160, 154));
+        setBackground(new java.awt.Color(70, 73, 55));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         lblNome.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         lblNome.setText("Nome:");
@@ -62,21 +64,21 @@ public class CadastroScreen extends javax.swing.JFrame {
         lblTipoSanguineo.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         lblTipoSanguineo.setText("Seu tipo sanguíneo:");
 
-        txtNome.setBackground(new java.awt.Color(70, 73, 55));
+        txtNome.setBackground(new java.awt.Color(204, 204, 204));
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
             }
         });
 
-        txtCpf.setBackground(new java.awt.Color(70, 73, 55));
+        txtCpf.setBackground(new java.awt.Color(204, 204, 204));
         txtCpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCpfActionPerformed(evt);
             }
         });
 
-        txtSenha.setBackground(new java.awt.Color(70, 73, 55));
+        txtSenha.setBackground(new java.awt.Color(204, 204, 204));
         txtSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSenhaActionPerformed(evt);
@@ -113,7 +115,7 @@ public class CadastroScreen extends javax.swing.JFrame {
             }
         });
 
-        fmtDataNascimento.setBackground(new java.awt.Color(70, 73, 55));
+        fmtDataNascimento.setBackground(new java.awt.Color(204, 204, 204));
         fmtDataNascimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fmtDataNascimentoActionPerformed(evt);
@@ -132,7 +134,7 @@ public class CadastroScreen extends javax.swing.JFrame {
         lblTipoSanguineo2.setName(""); // NOI18N
 
         lblTipoSanguineo3.setFont(new java.awt.Font("Segoe UI Semibold", 2, 18)); // NOI18N
-        lblTipoSanguineo3.setForeground(new java.awt.Color(232, 160, 154));
+        lblTipoSanguineo3.setForeground(new java.awt.Color(192, 57, 43));
         lblTipoSanguineo3.setText("DOE SANGUE, DOE VIDAS");
         lblTipoSanguineo3.setMaximumSize(new java.awt.Dimension(100, 16));
         lblTipoSanguineo3.setName(""); // NOI18N
@@ -335,17 +337,6 @@ public class CadastroScreen extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (Exception ex) {
-            // Se não encontrar, segue com o default
-        }
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CadastroScreen().setVisible(true);
