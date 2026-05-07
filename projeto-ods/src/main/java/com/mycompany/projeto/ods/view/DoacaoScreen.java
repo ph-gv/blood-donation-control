@@ -5,6 +5,7 @@ import com.mycompany.projeto.ods.dao.HemocentroDAO;
 import com.mycompany.projeto.ods.model.Doacao;
 import com.mycompany.projeto.ods.model.Hemocentro;
 import com.mycompany.projeto.ods.model.Doador;
+import com.mycompany.projeto.ods.util.GerarPdfAgendamento;
 import javax.swing.*;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
@@ -21,9 +22,6 @@ public class DoacaoScreen extends javax.swing.JFrame {
 
     private final Doador usuario;
 
-    /**
-     * Construtor padrão para testes isolados.
-     */
     public DoacaoScreen() {
         this.usuario = null;
         initComponents();
@@ -32,9 +30,6 @@ public class DoacaoScreen extends javax.swing.JFrame {
         carregaHemocentros();
     }
 
-    /**
-     * Construtor principal: recebe o usuário logado.
-     */
     public DoacaoScreen(Doador usuario) {
         this.usuario = Objects.requireNonNull(usuario);
         initComponents();
@@ -61,13 +56,13 @@ public class DoacaoScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblSelecioneLocal.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        lblSelecioneLocal.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14));
         lblSelecioneLocal.setText("Selecione o Local:");
 
-        lblData.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        lblData.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14));
         lblData.setText("Selecione a Data:");
 
-        lblHora.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        lblHora.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14));
         lblHora.setText("Selecione o Horário:");
 
         cmbHemocentros.setBackground(new java.awt.Color(70, 73, 55));
@@ -87,7 +82,7 @@ public class DoacaoScreen extends javax.swing.JFrame {
         });
 
         btnVoltar.setBackground(new java.awt.Color(232, 160, 154));
-        btnVoltar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnVoltar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12));
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setText("VOLTAR");
         btnVoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -98,7 +93,7 @@ public class DoacaoScreen extends javax.swing.JFrame {
         });
 
         btnAgendar.setBackground(new java.awt.Color(192, 57, 43));
-        btnAgendar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        btnAgendar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12));
         btnAgendar.setText("AGENDAR");
         btnAgendar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAgendar.addActionListener(new java.awt.event.ActionListener() {
@@ -107,10 +102,10 @@ public class DoacaoScreen extends javax.swing.JFrame {
             }
         });
 
-        lblHora1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        lblHora1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18));
         lblHora1.setText("Doação");
 
-        lblHora2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        lblHora2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14));
         lblHora2.setText("Agende quando você irá fazer sua doação preenchendo abaixo:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -184,10 +179,7 @@ public class DoacaoScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnAgendarActionPerformed
-
-        // 1) Primeiro, pega a string que foi adicionada ao combo:
         String nomeSelecionado = (String) cmbHemocentros.getSelectedItem();
-        // 2) Busca o objeto Hemocentro correspondente no banco
         Hemocentro selecionado = new HemocentroDAO().buscarPorNome(nomeSelecionado);
         if (selecionado == null) {
             JOptionPane.showMessageDialog(this, "Selecione um hemocentro.", "Erro de Validação",
@@ -195,15 +187,13 @@ public class DoacaoScreen extends javax.swing.JFrame {
             return;
         }
 
-        String dataStr = fmtData.getText(); // ex.: "25/12/1990"
-        String horaStr = fmtHora.getText(); // ex.: "14:30"
+        String dataStr = fmtData.getText();
+        String horaStr = fmtHora.getText();
 
-        // Converter data e hora
         LocalDate data;
         LocalTime hora;
         try {
-            DateTimeFormatter fmtBR = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            data = LocalDate.parse(dataStr, fmtBR);
+            data = LocalDate.parse(dataStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         } catch (DateTimeParseException ex) {
             JOptionPane.showMessageDialog(this, "Data inválida. Use DD/MM/AAAA.", "Erro de Validação",
                     JOptionPane.ERROR_MESSAGE);
@@ -211,8 +201,7 @@ public class DoacaoScreen extends javax.swing.JFrame {
             return;
         }
         try {
-            DateTimeFormatter fmtHoraPattern = DateTimeFormatter.ofPattern("HH:mm");
-            hora = LocalTime.parse(horaStr, fmtHoraPattern);
+            hora = LocalTime.parse(horaStr, DateTimeFormatter.ofPattern("HH:mm"));
         } catch (DateTimeParseException ex) {
             JOptionPane.showMessageDialog(this, "Horário inválido. Use HH:mm.", "Erro de Validação",
                     JOptionPane.ERROR_MESSAGE);
@@ -220,23 +209,19 @@ public class DoacaoScreen extends javax.swing.JFrame {
             return;
         }
 
-        LocalDateTime dataHora = LocalDateTime.of(data, hora);
-        if (dataHora.isBefore(LocalDateTime.now())) {
+        if (LocalDateTime.of(data, hora).isBefore(LocalDateTime.now())) {
             JOptionPane.showMessageDialog(this, "Não é possível agendar em horário passado.", "Erro de Validação",
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // Verificar disponibilidade
         DoacaoDAO dDao = new DoacaoDAO();
-        boolean disponivel = dDao.verificarDisponibilidade(selecionado.getId(), data, hora);
-        if (!disponivel) {
+        if (!dDao.verificarDisponibilidade(selecionado.getId(), data, hora)) {
             JOptionPane.showMessageDialog(this, "Horário indisponível neste hemocentro.", "Erro de Disponibilidade",
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // Salvar agendamento
         Doacao nova = new Doacao();
         nova.setIdDoador(usuario != null ? usuario.getId() : 0);
         nova.setIdLocalColeta(selecionado.getId());
@@ -247,6 +232,10 @@ public class DoacaoScreen extends javax.swing.JFrame {
         try {
             dDao.salvar(nova);
             JOptionPane.showMessageDialog(this, "Agendamento confirmado!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+
+            // GERA O PDF DO COMPROVANTE
+            GerarPdfAgendamento.gerar(usuario, nova, selecionado);
+
             new MenuPrincipal(usuario).setVisible(true);
             this.dispose();
         } catch (Exception e) {
@@ -256,68 +245,51 @@ public class DoacaoScreen extends javax.swing.JFrame {
     }// GEN-LAST:event_btnAgendarActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnVoltarActionPerformed
-        // Volta ao menu principal
         if (usuario != null) {
             new MenuPrincipal(usuario).setVisible(true);
         } else {
-            new LoginScreen().setVisible(true); // caso de teste isolado
+            new LoginScreen().setVisible(true);
         }
         this.dispose();
     }// GEN-LAST:event_btnVoltarActionPerformed
 
     private void fmtDataActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fmtDataActionPerformed
-        // Focar no campo de horário ao pressionar Enter na data
         fmtHora.requestFocusInWindow();
     }// GEN-LAST:event_fmtDataActionPerformed
 
     private void fmtHoraActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fmtHoraActionPerformed
-        // Focar no botão Agendar ao pressionar Enter no horário
         btnAgendar.requestFocusInWindow();
     }// GEN-LAST:event_fmtHoraActionPerformed
 
-    /**
-     * Configura as máscaras de data e horário para o JFormattedTextField
-     */
     private void configuraFormatters() {
         try {
-            // Máscara para data: DD/MM/AAAA
             MaskFormatter mfData = new MaskFormatter("##/##/####");
             mfData.setPlaceholderCharacter('_');
             fmtData.setFormatterFactory(new DefaultFormatterFactory(mfData));
 
-            // Máscara para horário: HH:mm
             MaskFormatter mfHora = new MaskFormatter("##:##");
             mfHora.setPlaceholderCharacter('0');
             fmtHora.setFormatterFactory(new DefaultFormatterFactory(mfHora));
-
         } catch (ParseException e) {
             e.printStackTrace();
         }
     }
 
-    /**
-     * Popula o JComboBox de hemocentros usando o DAO
-     */
     private void carregaHemocentros() {
         cmbHemocentros.removeAllItems();
         HemocentroDAO hDao = new HemocentroDAO();
         List<Hemocentro> lista = hDao.listarTodos();
         if (lista.isEmpty()) {
-            cmbHemocentros.addItem(""); // ou alguma mensagem vazia
+            cmbHemocentros.addItem("");
         } else {
             for (Hemocentro h : lista) {
-                // Adiciona apenas o nome (String) no JComboBox<String>
                 cmbHemocentros.addItem(h.getNome());
             }
         }
     }
 
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DoacaoScreen().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new DoacaoScreen().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

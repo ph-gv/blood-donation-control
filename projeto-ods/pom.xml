@@ -15,33 +15,26 @@
     </properties>
     
     <dependencies>
-        <!--
-            SQLite JDBC — driver serverless que cria/lê um arquivo .db local.
-            Versão 3.45.3.0 é estável e está no Maven Central.
-            Substitui completamente o prévio mysql-connector-java.
-        -->
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.45.3.0</version>
         </dependency>
-
-        <!-- Dependência do BCrypt -->
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
-            <type>jar</type>
+        </dependency>
+        <!-- iText para geração de PDF -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.13.3</version>
         </dependency>
     </dependencies>
     
     <build>
         <plugins>
- 
-            <!--
-                Plugin exec-maven-plugin: permite rodar "mvn exec:java"
-                para iniciar a aplicação diretamente, sem precisar gerar JAR primeiro.
-            -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -50,12 +43,6 @@
                     <mainClass>com.mycompany.projeto.ods.Main</mainClass>
                 </configuration>
             </plugin>
- 
-            <!--
-                maven-jar-plugin: configura o JAR final para ser executável
-                com "java -jar projeto-ods-1.0-SNAPSHOT.jar".
-                O manifest aponta para a classe Main como entry point.
-            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -69,7 +56,6 @@
                     </archive>
                 </configuration>
             </plugin>
- 
         </plugins>
     </build>
 </project>
