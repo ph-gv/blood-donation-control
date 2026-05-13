@@ -23,32 +23,33 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="81" max="32767" attributes="0"/>
-              <Component id="lblBoasVindas1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="368" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="50" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnAgendar" max="32767" attributes="0"/>
-                          <Component id="btnMeusAgendamentos" alignment="0" pref="260" max="32767" attributes="0"/>
-                          <Component id="btnEditarPerfil" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnSair" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
-                      <Component id="lblBoasVindas" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btnAgendar" max="32767" attributes="0"/>
+                  <Component id="btnMeusAgendamentos" alignment="0" pref="260" max="32767" attributes="0"/>
+                  <Component id="btnEditarPerfil" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnSair" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblBoasVindas" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="89" max="32767" attributes="0"/>
+                      <Component id="lblBoasVindas1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,19 +58,22 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Component id="lblBoasVindas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel2" min="-2" pref="67" max="-2" attributes="0"/>
+                  <Component id="lblBoasVindas" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lblBoasVindas1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnAgendar" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="btnMeusAgendamentos" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="btnEditarPerfil" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="btnSair" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace pref="90" max="32767" attributes="0"/>
+              <EmptySpace pref="53" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,9 +82,9 @@
     <Component class="javax.swing.JLabel" name="lblBoasVindas">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI Semibold" size="14" style="1"/>
+          <Font name="Segoe UI Semibold" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Ol&#xe1;, Seja muito(a) Bem-Vindo(a)"/>
+        <Property name="text" type="java.lang.String" value="Ol&#xe1;, Seja muito Bem-Vindo(a)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAgendar">
@@ -182,6 +186,13 @@
           <Font name="Segoe UI Semibold" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Conhe&#xe7;a uma forma simples e r&#xe1;pida de agendar sua doa&#xe7;&#xe3;o de sangue."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\T-GAMER\codes\blood-donation-control\projeto-ods\src\main\resources\icons\donate.png"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>
