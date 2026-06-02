@@ -89,7 +89,7 @@ mvn clean install
 mvn exec:java -Dexec.mainClass="com.mycompany.projeto.ods.Main"
 ```
 
-Ou use o executável gerado em `target/` (`.jar` / `.exe`).
+Ou use o executável gerado em `target/` (`.jar` / `.bat`).
 
 ---
 
@@ -118,7 +118,7 @@ Práticas de segurança aplicadas:
 | 2 | Tratamento de exceções, segurança de dados, padronização visual das telas principais |
 | 3 | Funcionalidade de reagendamento com calendário e confirmação por ação |
 | 4 | Geração de comprovante de agendamento em PDF |
-| 5 | Consolidação, correção de bugs e empacotamento final (`.jar` / `.exe`) |
+| 5 | Consolidação, correção de bugs e empacotamento final (`.jar` / `.bat`) |
 
 ---
 
